@@ -1,0 +1,3 @@
+ODBC Driver for SQL Server Connections can be found here:
+
+https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver17

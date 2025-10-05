@@ -1,0 +1,47 @@
+source:
+  type: sqlserver
+  host: "Game-Room-Two"
+  port: 1433
+  database: "f2h_core-2022-9-28-6-40"
+  username: "sa"
+  password: "Mys3curePa55w0rd!@"
+  driver: "ODBC Driver 18 for SQL Server"
+  encrypt: "yes"
+  trust-server-certificate: "Yes"
+
+target:
+  type: postgres
+  host: "192.168.7.10"
+  port: 5433
+  database: "faces2hire"
+  username: "username"
+  password: "password"
+
+tables:
+  users:
+    source: "dbo.tab_User"
+    target: "users"
+    done: false
+    columns:
+      - source: "User_GUID"
+        target: "id"
+        type: "str"
+        done: false
+      - source: "User_NameFirst"
+        target: "first_name"
+        type: "str"
+        done: false
+      - source: "User_NameLast"
+        target: "last_name"
+        type: "str"
+        done: false
+      - source: "User_Email"
+        target: "email"
+        type: "str"
+        done: false
+      - source: "User_Tele"
+        target: "phone"
+        type: "str"
+        done: false
+
+
